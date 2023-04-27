@@ -1,0 +1,21 @@
+{
+  "name": "learnplaywright",
+  "version": "1.0.0",
+  "description": "Practice playwright\r Playwright learning journey \r Test",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cos32003/learnplaywright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cos32003/learnplaywright/issues"
+  },
+  "homepage": "https://github.com/cos32003/learnplaywright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.33.0"
+  }
+}
