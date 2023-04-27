@@ -1,3 +1,3 @@
 # learnplaywright
-Practice playwright and learn 
+Practice playwright
 Playwright learning journey 
