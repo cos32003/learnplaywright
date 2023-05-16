@@ -9,7 +9,7 @@ import { PlaywrightTestConfig, defineConfig, devices } from '@playwright/test';
 const config: PlaywrightTestConfig = {
   testMatch: ["tests/login.test.ts"],
   use:{
-    headless:false,
+    headless:true,
     screenshot:'only-on-failure',
     video:'retain-on-failure',
   },
