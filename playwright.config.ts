@@ -1,10 +1,27 @@
-import { defineConfig, devices } from '@playwright/test';
+import { PlaywrightTestConfig, defineConfig, devices } from '@playwright/test';
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
 // require('dotenv').config();
+
+const config: PlaywrightTestConfig = {
+  testMatch: ["tests/login.test.ts"],
+  use:{
+    headless:false,
+    screenshot:'only-on-failure',
+    video:'retain-on-failure',
+  },
+  retries:2,
+  reporter:[["dot"],['json',{
+    outputFile:'jsonReports/jsonReport.json',
+  }],
+  ['html', {
+    open:"never"
+}]]
+};
+
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -23,6 +40,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    headless: false,
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
@@ -37,15 +55,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {

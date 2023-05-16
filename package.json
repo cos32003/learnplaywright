@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Practice playwright\r Playwright learning journey \r Test",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test":"npx playwright test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cos32003/learnplaywright.git"
